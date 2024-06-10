@@ -35,7 +35,7 @@ p {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   font-family: "Blatant";
 }
 
@@ -134,80 +134,97 @@ nav {
   margin-bottom: 50px;
 }
 
-.blogs {
-  padding: 0px 50px;
+/* Media */
+
+.video-section {
+  height: 550px;
+  overflow: hidden;
+  background-color: #ffffff;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 40px;
-  flex-wrap: wrap;
+  width: 100vw;
 }
 
-.blog .blog-container {
+.video-section p {
+  margin-top: 15px;
+  font-size: 16px;
+  color: #767676;
+}
+
+.video-container {
   position: relative;
   display: inline-block;
-  cursor: pointer;
+  width: 730px;
+  height: 398px;
+  margin-bottom: 15px;
 }
-
-.blog-container img {
-  height: 260px;
-  width: 350px;
-  border-radius: 10px;
-  display: block;
+.video-container iframe {
+  width: 728px;
+  height: 398px;
+  overflow-y: hidden;
 }
-
-.image-bottom {
+.video-thumbnail {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 50%;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0));
-  display: flex;
-  justify-content: space-between;
-  align-items: end;
-  color: #fff;
-  padding: 20px;
-  opacity: 0;
-  transition: opacity 0.3s;
-  border-radius: 10px;
-}
-
-.blog-container:hover .image-bottom {
-  opacity: 1;
-}
-
-.blog-text {
-  margin: 0;
-}
-
-.image-bottom-right {
-  display: flex;
-  gap: 10px;
-}
-
-.icon {
+  display: block;
+  width: 103%;
+  height: auto;
   cursor: pointer;
-  font-size: 24px;
+  z-index: 3;
 }
 
-.blog-bottom {
-  padding: 0px 5px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.play-btn {
+  overflow: hidden;
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #0057b0;
+  color: #fff;
+  border-radius: 50%;
+  animation: pulse 1.5s cubic-bezier(0, 0.7, 0.3, 1) forwards infinite;
+  z-index: 5;
+  border: none;
+  outline: none;
+  cursor: pointer;
 }
 
-.blog-bottom-right {
-  display: flex;
-  gap: 10px;
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 #ffffff80;
+  }
+  100% {
+    box-shadow: 0 0 0 20px #ffffff00;
+  }
 }
 
-.blog-bottom-left {
-  color: #333;
+.play-btn .material-symbols-rounded {
+  font-size: 4.5rem;
+  font-variation-settings: "FILL" 1;
 }
 
-.blog-bottom-right p {
-  color: gray;
-  font-size: 13px;
+@media (max-width: 600px) {
+  .video-section {
+    height: 350px;
+  }
+
+  .video-container {
+    width: 95vw;
+    height: 200px;
+  }
+  .video-container iframe {
+    width: 95vw;
+    height: 200px;
+  }
+  .video-thumbnail {
+    width: 95vw;
+    height: 200px;
+  }
+  .insights {
+    width: 100vw;
+    padding: 40px 30px 10px;
+  }
 }
