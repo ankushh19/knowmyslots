@@ -8,3 +8,6 @@ function playVideo() {
   video.style.display = "block";
   video.src += "&autoplay=1";
 }
+
+var copy = document.querySelector(".logos-slide").cloneNode(true);
+document.querySelector(".logos").appendChild(copy);
