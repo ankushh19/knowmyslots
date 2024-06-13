@@ -45,6 +45,10 @@ body {
   height: 100%;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 main {
   display: flex;
   justify-content: center;
@@ -253,7 +257,7 @@ nav {
 .main p.heading {
   margin-top: 60px;
   font-size: 45px;
-  color: #333;
+  color: #0d0c22;
   margin-bottom: 50px;
 }
 
@@ -334,4 +338,77 @@ nav {
 .blog-bottom-right p {
   color: gray;
   font-size: 13px;
+}
+
+/* Footer */
+
+.footer {
+  border-top: 1px solid #eeeded;
+  padding: 40px 80px;
+}
+
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+footer .col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+footer .logo {
+  margin-bottom: 20px;
+  height: 50px;
+  width: 100px;
+  object-fit: cover;
+}
+
+footer h4 {
+  font-size: 22px;
+  padding-bottom: 20px;
+}
+
+footer p {
+  font-size: 16px;
+  margin: 0 0 8px 0;
+}
+
+footer a {
+  font-size: 16px;
+  text-decoration: none;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+footer .follow {
+  margin-top: 20px;
+}
+
+footer .follow i {
+  color: #465b52;
+  padding-right: 4px;
+  cursor: pointer;
+}
+
+footer .install .row img {
+  border: 1px solid #088178;
+  border-radius: 4px;
+}
+
+footer .install img {
+  margin: 10px 0 15px 0;
+}
+
+footer .follow i:hover,
+footer a:hover {
+  color: #088178;
+}
+
+footer .copyright {
+  width: 100%;
+  text-align: center;
 }
