@@ -38,3 +38,58 @@ links.forEach((link) => {
     forms.classList.toggle("show-signup");
   });
 });
+
+// Tabs
+
+const textElement = document.getElementById("text");
+const storyTextElement = document.getElementById("storyText");
+const mainImageElement = document.getElementById("mainImage");
+const secondImageElement = document.getElementById("secondImage");
+
+function updateContent(value) {
+  switch (parseInt(value)) {
+    case 0:
+      textElement.textContent = "WANNA HEAR THE WHOLE STORY?";
+      storyTextElement.textContent =
+        "When I was 14 years old, I was asked by a doctor if I was eating all of my sister's food or if I could possibly be pregnant because I had gained so much weight.";
+      mainImageElement.src =
+        "https://images.unsplash.com/photo-1664575602554-2087b04935a5?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
+      secondImageElement.src =
+        "https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
+      break;
+    case 1:
+      textElement.textContent = "DISCOVER OUR PROCESS";
+      storyTextElement.textContent =
+        "We take a unique approach to ensure each step of our process is tailored to your needs.";
+      mainImageElement.src =
+        "https://images.unsplash.com/photo-1718046881340-80081de4ada3?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
+      secondImageElement.src =
+        "https://images.unsplash.com/photo-1714919031652-96d98e4276f8?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
+      break;
+    case 2:
+      textElement.textContent = "ACHIEVE GREAT RESULTS";
+      storyTextElement.textContent =
+        "Our dedication and expertise guarantee outstanding results for your business.";
+      mainImageElement.src =
+        "https://images.unsplash.com/photo-1718579044120-34c8a70e8e5a?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
+      secondImageElement.src =
+        "https://images.unsplash.com/photo-1718524127932-2696e2f59096?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
+      break;
+    default:
+      break;
+  }
+}
+
+updateContent(0);
+
+// testimonials
+
+// var swiper = new Swiper(".slider", {
+//   grabCursor: true,
+//   slidesPerView: 1,
+//   spaceBetween: 30,
+//   pagination: {
+//     el: ".swiper-pagination",
+//     clickable: true,
+//   },
+// });
