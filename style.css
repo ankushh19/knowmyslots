@@ -629,23 +629,34 @@ nav {
 
 /* Banner */
 
-/* .banner {
-  margin-top: 100px;
-  position: absolute;
-  z-index: 100;
-  bottom: -10px;
-  left: 0;
-  right: 0;
-  border-radius: 40px;
-  padding: 20px;
-  height: 80px;
-  width: 1000px;
+.banner {
   margin: 0 auto;
+  height: 100px;
+  border-radius: 50px;
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: space-around;
-  background-color: #fa5036;
-} */
+  background-color: orangered;
+  padding: 20px;
+  color: #fff;
+  width: 1200px;
+}
+
+.banner-left {
+  padding-left: 20px;
+}
+
+.banner-center {
+  width: 400px;
+}
+
+.banner button {
+  padding: 15px 30px;
+  margin-left: 10px;
+  border-radius: 40px;
+  border: none;
+  /* color: #fff; */
+}
 
 /* Reviews */
 .reviews {
@@ -699,6 +710,7 @@ nav {
   flex-wrap: wrap;
   padding: 40px 80px;
   background-color: #eddfd3;
+  position: relative;
 }
 
 .operation {
@@ -852,6 +864,7 @@ nav {
 
 /* easy steps */
 .easy-steps {
+  position: relative;
   background-color: #fff9f9;
   display: flex;
   justify-content: center;
@@ -880,6 +893,7 @@ nav {
 
 .steps {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   gap: 40px;
@@ -1257,4 +1271,86 @@ footer a:hover {
 footer .copyright {
   width: 100%;
   text-align: center;
+}
+
+/* Media Queries for Responsiveness */
+
+/* For Laptop */
+@media screen and (max-width: 1400px) {
+  /* Resource Guide */
+  .resources-guide {
+    padding: 20px 30px;
+  }
+
+  .resource {
+    max-height: 350px;
+    width: 300px;
+  }
+
+  .resource img {
+    height: 35px;
+  }
+
+  .resource .resource-head {
+    font-size: 26px;
+  }
+
+  .resource .resource-des {
+    font-size: 16px;
+  }
+
+  .resource button {
+    font-size: 16px;
+  }
+}
+
+/* For IPad */
+@media screen and (max-width: 1265px) {
+  nav {
+    padding: 25px 3%;
+  }
+
+  .nav-left {
+    gap: 10px;
+  }
+
+  .nav-left img {
+    height: 40px;
+  }
+
+  .nav-left h1 {
+    font-size: 30px;
+  }
+
+  .nav-right {
+    gap: 30px;
+  }
+  /* Logos */
+  .logos img {
+    height: 70px;
+    width: 70px;
+    object-fit: contain;
+  }
+  /* Operation */
+  .operation:nth-child(2) {
+    margin-top: 0px;
+  }
+
+  .operation:nth-child(3) {
+    margin-top: 0px;
+  }
+  /* Banner */
+  .banner {
+    height: 100px;
+    width: 780px;
+  }
+  .banner-left h1 {
+    font-size: 26px;
+  }
+  .banner-left p {
+    font-size: 14px;
+  }
+  .banner-center {
+    width: 340px;
+  }
 }
