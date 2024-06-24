@@ -82,14 +82,18 @@ function updateContent(value) {
 
 updateContent(0);
 
-// testimonials
+document.addEventListener("DOMContentLoaded", function () {
+  function removeBrFromH1() {
+    const header = document.querySelector(".responsive-header");
+    if (window.innerWidth <= 970) {
+      header.innerHTML = header.innerHTML.replace(/<br\s*\/?>/gi, " ");
+    } else {
+      header.innerHTML =
+        "Unlock Your American Dream <br /> Simplify Your U.S Visa Journey with <br /> Our Tech Platform";
+    }
+  }
 
-// var swiper = new Swiper(".slider", {
-//   grabCursor: true,
-//   slidesPerView: 1,
-//   spaceBetween: 30,
-//   pagination: {
-//     el: ".swiper-pagination",
-//     clickable: true,
-//   },
-// });
+  removeBrFromH1();
+
+  window.addEventListener("resize", removeBrFromH1);
+});

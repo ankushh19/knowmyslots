@@ -121,6 +121,12 @@ nav {
   background-color: #f04216;
 }
 
+nav i {
+  font-size: 40px;
+  color: #fe633d;
+  display: none;
+}
+
 .main {
   display: flex;
   justify-content: center;
@@ -136,6 +142,8 @@ nav {
   color: #333;
   margin-bottom: 50px;
 }
+
+/* Content */
 
 .content {
   display: flex;
@@ -153,13 +161,14 @@ nav {
   margin-top: 50px;
   justify-self: center;
   font-weight: 600;
+  text-align: center;
 }
 
 .content h1 {
   margin-top: 35px;
   text-align: center;
   color: #0d0c22;
-  font-size: 70px;
+  font-size: 60px;
   justify-self: center;
   font-family: Georgia, "Times New Roman", Times, serif;
   font-weight: 400;
@@ -336,6 +345,7 @@ nav {
 }
 
 .logos-section {
+  border-top: 1px solid #eeeded;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -350,7 +360,7 @@ nav {
   padding: 5px;
   border-radius: 50px;
   padding: 12px 30px;
-  margin-top: 50px;
+  margin-top: 35px;
   justify-self: center;
   font-weight: 600;
 }
@@ -630,13 +640,14 @@ nav {
 /* Banner */
 
 .banner {
+  transform: translateY(-50%);
   margin: 0 auto;
   height: 100px;
   border-radius: 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: orangered;
+  background-color: #fe633d;
   padding: 20px;
   color: #fff;
   width: 1200px;
@@ -651,11 +662,16 @@ nav {
 }
 
 .banner button {
+  cursor: pointer;
   padding: 15px 30px;
   margin-left: 10px;
   border-radius: 40px;
   border: none;
   /* color: #fff; */
+}
+
+.banner button:hover {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.22);
 }
 
 /* Reviews */
@@ -666,19 +682,23 @@ nav {
   gap: 40px;
   flex-wrap: wrap;
   padding: 40px 80px;
+  border-bottom: 1px solid #eeeded;
 }
 
 .review {
   text-align: center;
-  height: 250px;
-  width: 210px;
+  height: 350px;
+  width: 310px;
   /* background-color: lightblue; */
   padding: 20px;
 }
 
 .review i {
+  font-size: 50px;
+  color: #fe633d;
+}
+.review h1 {
   font-size: 40px;
-  color: crimson;
 }
 
 .review button {
@@ -693,41 +713,56 @@ nav {
 
 .review .review-title {
   margin: 5px 0px;
+  font-size: 26px;
 }
 
 .review .review-des {
-  font-size: 13px;
+  font-size: 15px;
   margin-bottom: 10px;
   color: #333;
 }
 
 /* Operations */
 .operations {
+  border-top: 1px solid #eeeded;
+  border-bottom: 1px solid #eeeded;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 40px;
+  gap: 10px;
   flex-wrap: wrap;
   padding: 40px 80px;
-  background-color: #eddfd3;
+  background-color: #fcfbf7;
   position: relative;
 }
 
 .operation {
+  margin-right: 80px;
   background-color: #fff;
   height: 480px;
+  margin-bottom: 10px;
+  margin-top: 10px;
   border-radius: 40px;
-  width: 280px;
+  max-width: 280px;
   text-align: center;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.22);
 }
 
-.operation:nth-child(2) {
-  margin-top: 50px;
+.operations h1 {
+  font-size: 40px;
+  /* margin-right: 20px; */
 }
 
-.operation:nth-child(3) {
-  margin-top: 100px;
+.operations-card {
+  margin-bottom: 80px;
+  padding: 0px 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
 }
 
 .operation img {
@@ -752,7 +787,7 @@ nav {
 .operation button {
   cursor: pointer;
   border: none;
-  background-color: crimson;
+  background-color: #fe633d;
   color: #fff;
   height: 50px;
   width: 50px;
@@ -761,6 +796,7 @@ nav {
 
 /* testimonials */
 .testimonials {
+  border-bottom: 1px solid #eeeded;
   padding: 40px;
 }
 
@@ -996,6 +1032,7 @@ nav {
 }
 
 .different {
+  border-bottom: 1px solid #eeeded;
   padding: 40px;
   display: flex;
   flex-direction: column;
@@ -1016,7 +1053,6 @@ nav {
   justify-content: center;
   align-items: center;
   background-color: white;
-
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
   overflow: hidden;
@@ -1159,10 +1195,11 @@ nav {
 
 .contact-us {
   border-top: 1px solid #eeeded;
+  border-bottom: 1px solid #eeeded;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 40px;
+  padding: 50px;
 }
 
 .contact-card {
@@ -1198,6 +1235,10 @@ nav {
   border: none;
   cursor: pointer;
   border-radius: 30px;
+}
+
+.contact-card button:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 /* Footer */
@@ -1352,5 +1393,93 @@ footer .copyright {
   }
   .banner-center {
     width: 340px;
+  }
+}
+
+@media screen and (max-width: 1520px) {
+  .operation {
+    margin-right: 0px;
+  }
+  .operations-card {
+    padding: 0px 20px;
+    gap: 40px;
+  }
+  .review {
+    height: 270px;
+    width: 230px;
+  }
+  .review i {
+    font-size: 40px;
+  }
+  .review h1 {
+    font-size: 30px;
+  }
+  .review .review-title {
+    font-size: 20px;
+  }
+
+  .review .review-des {
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .nav-right {
+    display: none;
+  }
+  nav i {
+    display: flex;
+    padding-right: 20px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .operations {
+    padding: 40px 40px;
+  }
+  .banner-center {
+    display: none;
+  }
+  .banner {
+    width: 500px;
+  }
+  .contact-card {
+    padding: 20px 40px;
+    flex-direction: column;
+  }
+  .contact-card .contact-image {
+    height: 300px;
+  }
+  .contact-card button {
+    margin-left: 80px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .content h3 {
+    padding: 5px;
+  }
+  .content h1 {
+    font-size: 45px;
+  }
+  .banner {
+    width: 370px;
+  }
+  .contact-card .contact-image {
+    height: 150px;
+  }
+  .resources-guide h1 {
+    text-align: center;
+  }
+  .reviews {
+    gap: 10px;
+  }
+
+  .right {
+    display: none;
+  }
+
+  .arrow {
+    display: none;
   }
 }
