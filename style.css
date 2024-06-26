@@ -1,16 +1,4 @@
-@font-face {
-  font-family: "Blatant";
-  src: url("./font/Blatant.otf") format("opentype");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Blatant";
-  src: url("./font/Blatant-Bold.otf") format("opentype");
-  font-weight: 700;
-  font-style: normal;
-}
+@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
 
 h1,
 h2,
@@ -36,7 +24,7 @@ p {
   padding: 0;
   box-sizing: border-box;
   overflow-x: hidden;
-  font-family: "Blatant";
+  font-family: Montserrat;
 }
 
 html,
@@ -170,8 +158,7 @@ nav i {
   color: #0d0c22;
   font-size: 60px;
   justify-self: center;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .content p {
@@ -738,15 +725,21 @@ nav i {
 }
 
 .operation {
+  position: relative;
+  padding: 0px 10px;
   margin-right: 80px;
   background-color: #fff;
-  height: 480px;
+  height: 500px;
   margin-bottom: 10px;
   margin-top: 10px;
   border-radius: 40px;
   max-width: 280px;
   text-align: center;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.22);
+}
+
+.operation:hover {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
 }
 
 .operations h1 {
@@ -767,24 +760,28 @@ nav i {
 
 .operation img {
   margin-top: 50px;
-  margin-bottom: 40px;
+  margin-bottom: 10px;
   height: 150px;
   border-radius: 50px;
 }
 
 .operation .operation-title {
-  padding: 12px;
+  /* padding: 12px; */
   font-size: 20px;
-  margin-bottom: 20px;
+  font-weight: 500;
+  margin-bottom: 10px;
 }
 
 .operation .operation-des {
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   padding: 10px;
   color: #333;
 }
 
 .operation button {
+  position: absolute;
+  bottom: 20px;
+  right: 110px;
   cursor: pointer;
   border: none;
   background-color: #fe633d;
@@ -794,8 +791,12 @@ nav i {
   border-radius: 50%;
 }
 
-/* testimonials */
-.testimonials {
+.operation button a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* .testimonials .testimonials {
   border-bottom: 1px solid #eeeded;
   padding: 40px;
 }
@@ -896,6 +897,191 @@ nav i {
   -webkit-box-orient: vertical;
   margin-top: 1rem;
   color: rgba(107, 114, 128, 1);
+} */
+
+/* <----- New Testimonial----> */
+
+/* .testimonials {
+  border-bottom: 1px solid #eeeded;
+  padding: 40px 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.testimonials .sub-head {
+  text-transform: uppercase;
+}
+
+.testimonials h1 {
+  margin-top: 10px;
+  font-size: 40px;
+}
+
+.testimonials .testimonial-cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.testimonial {
+  margin-top: 40px;
+  margin-bottom: 10px;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  background-color: #fff;
+}
+
+.testimonial .stars {
+  color: #ffd700;
+  font-size: 25px;
+  margin-bottom: 5px;
+}
+
+.testimonial h3 {
+  margin: 0 0 10px 0;
+  font-size: 17px;
+  color: rgb(106, 102, 102);
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+.testimonial p {
+  font-size: 18px;
+  font-weight: 300;
+  color: rgb(83, 83, 83);
+  margin-bottom: 20px;
+}
+
+.testimonial .user {
+  display: flex;
+  align-items: center;
+}
+
+.testimonial .user img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.testimonial .user-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonial .name {
+  font-size: 16px;
+}
+
+.testimonial .date {
+  font-size: 16px;
+  color: #888;
+} */
+
+/* Altertnate Testimonial */
+.testimonials {
+  border-bottom: 1px solid #eeeded;
+  padding: 40px 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: auto;
+  background-color: #d9c3db;
+}
+
+.testimonials .sub-head {
+  text-transform: uppercase;
+}
+
+.testimonials h1 {
+  margin-top: 10px;
+  font-size: 40px;
+}
+
+.testimonials .testimonial-cards {
+  display: flex;
+  overflow: visible;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+}
+
+.testimonial {
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  overflow: visible;
+  padding: 20px;
+  position: relative;
+  margin-top: 100px;
+  width: 350px;
+}
+
+.test-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+.test-left {
+  border-top-right-radius: 25px;
+  top: -17%;
+  left: -10%;
+  z-index: 10;
+  height: 60px;
+  width: 200px;
+  padding-top: 10px;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  background-color: purple;
+}
+
+.test-left > p {
+  color: white;
+}
+
+.test-left .stars {
+  color: gold;
+  text-align: right;
+}
+
+.test-header img {
+  right: 0;
+  top: -20%;
+  position: absolute;
+  height: 80px;
+  width: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 8px solid #fff;
+}
+
+.test-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+}
+
+.test-content .author {
+  color: purple;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.test-content .content {
+  color: rgb(61, 6, 61);
 }
 
 /* easy steps */
