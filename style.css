@@ -80,6 +80,7 @@ nav {
 
 .nav-right a {
   font-size: 22px;
+  font-weight: 500;
   color: #0d0c22;
   text-decoration: none;
   transition: all 0.3s ease 0s;
@@ -1009,6 +1010,7 @@ nav i {
   overflow: visible;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   gap: 80px;
 }
 
