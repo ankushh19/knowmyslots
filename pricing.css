@@ -145,8 +145,7 @@ nav i {
 .image {
   border-bottom: 1px solid #eeeded;
   /* margin-top: 20px; */
-  padding-bottom: 60px;
-  background-color: #fcfbf7;
+  /* padding-bottom: 60px; */
   width: 100vw;
   height: 90vh;
   display: flex;
@@ -156,24 +155,59 @@ nav i {
 }
 
 .image img {
-  max-width: 100%;
-  max-height: 100%;
-  width: auto;
-  height: auto;
-  object-fit: contain;
+  width: 100%;
+  object-position: center;
+  height: 100%;
+  object-fit: cover;
 }
+
+/* Ads */
+.ads {
+  background-color: #fcfbf7;
+  border-bottom: 1px solid #eeeded;
+  padding: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.ads h1 {
+  font-size: 40px;
+  line-height: 1.4;
+}
+
+.ads p {
+  text-align: center;
+  width: 640px;
+  line-height: 1.4;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.ads button {
+  padding: 12px 20px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
 /* Banner */
 
 .banner {
-  transform: translateY(-60%);
-  margin: 20px auto;
+  transform: translateY(-65%);
+  margin: 10px auto;
   height: 100px;
   border-radius: 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #fe633d;
-  padding: 20px;
+  padding: 10px;
   color: #fff;
   width: 1200px;
 }
@@ -190,6 +224,7 @@ nav i {
   cursor: pointer;
   padding: 15px 30px;
   margin-left: 10px;
+  font-weight: 500;
   border-radius: 40px;
   border: none;
 }
@@ -197,7 +232,8 @@ nav i {
 /* people */
 
 .people {
-  padding: 40px 80px;
+  transform: translateY(-10%);
+  padding: 20px 80px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -209,6 +245,12 @@ nav i {
   border-radius: 10px;
   width: 250px;
   object-fit: cover;
+  transition: filter 0.3s;
+  cursor: pointer;
+}
+
+video.blur {
+  filter: blur(4px);
 }
 
 /* Operations */
@@ -219,10 +261,10 @@ nav i {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 20px;
   flex-wrap: wrap;
   padding: 40px 80px;
-  background-color: #fcfbf7;
+  /* background-color: #fcfbf7; */
 }
 
 .operation {
@@ -356,7 +398,7 @@ nav i {
 
 .f1-cards,
 .b1-cards {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   padding: 0px 100px;
   display: flex;
   flex-direction: row;
@@ -367,34 +409,43 @@ nav i {
 }
 
 .card {
+  --main-color: #323232;
+  --sub-color: #5b5b5b;
+  --bg-color: #c7c7c7;
+  --accent-color: #242c88;
   position: relative;
-  width: 305px;
-  height: 400px;
-  padding: 30px;
+  border: 1px solid #000;
+  width: 320px;
+  padding: 25px;
   border-radius: 25px;
   display: flex;
   flex-direction: column;
-  gap: 5px;
-  background-color: #c7c7c7;
+  margin: 20px;
+  gap: 10px;
+  background-color: #fff;
   transition: all 0.2s;
   cursor: pointer;
-  box-shadow: 0px 0px 5px -1.5px #000;
   overflow: visible;
-  margin: 20px;
-  z-index: 100;
+  box-shadow: 0px 0px 5px -1.5px #000;
 }
 
 .card::before {
   content: "";
   width: 99%;
   height: 99%;
-  background: #fff;
+  background: var(--sub-color);
   position: absolute;
   z-index: -1;
   top: 1px;
   left: 1px;
   border-radius: 25px;
   transition: all 0.3s;
+}
+
+.card__icon circle,
+polyline,
+line {
+  stroke: var(--main-color);
 }
 
 .card:hover .card__icon {
@@ -420,10 +471,84 @@ nav i {
   box-shadow: 0px 0px 20px -5px #000;
 }
 
+.card__icon circle,
+polyline,
+line {
+  stroke: var(--main-color);
+}
+
+.card:hover .card__icon {
+  transform: rotate(0);
+}
+
+.card:hover .card__icon circle,
+.card:hover .card__icon polyline,
+.card:hover .card__icon line {
+  stroke: var(--accent-color);
+}
+
+.card:hover .card__icon g {
+  fill: var(--accent-color);
+}
+
+.card:hover {
+  box-shadow: 0px 0px 20px -5px #000;
+}
+
+.card:hover::before {
+  transform: rotate(10deg);
+  box-shadow: 0px 0px 20px -5px #000;
+}
+
+.st1 {
+  fill: #fff;
+}
+
+.st2 {
+  fill: none;
+  stroke: #242c88;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 10;
+}
+
+.st7 {
+  fill: #589fff;
+}
+
+.st9 {
+  fill: #bc8d66;
+}
+
+.st15,
+.st16 {
+  opacity: 0.4;
+  fill: #242c88;
+}
+
+.st16 {
+  opacity: 0.2;
+}
+
+.st18 {
+  fill: #ffc408;
+}
+
+.st53 {
+  fill: none;
+  stroke: #242c88;
+  stroke-width: 1.848;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 10;
+}
+
 .card .top-sub {
-  font-size: 23px;
+  text-align: center;
+  font-size: 24px;
   font-weight: 500;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
 }
 
 .card span {
@@ -431,13 +556,25 @@ nav i {
   font-weight: 400;
 }
 
+.card img {
+  margin: 0 auto;
+  margin-bottom: 5px;
+  height: 100px;
+  width: 100px;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
 .card h1 {
+  text-align: center;
   font-size: 40px;
-  margin-bottom: 15px;
+  margin-top: 0;
+  margin-bottom: 0px;
 }
 
 .card .sm-head {
-  margin-bottom: 15px;
+  text-align: center;
+  margin-bottom: 5px;
   font-weight: 500;
 }
 
@@ -454,8 +591,8 @@ nav i {
   position: relative;
   display: inline-block;
   padding: 7px 0px;
-  margin-left: 45px;
-  margin-right: 45px;
+  margin-left: 70px;
+  margin-right: 70px;
   margin-top: 10px;
   border-radius: 15px;
   text-align: center;
@@ -528,14 +665,14 @@ nav i {
   margin-top: 10px;
   overflow: visible;
   position: relative;
-  width: 320px;
-  height: 420px;
+  width: 200px;
+  height: 270px;
   border: 2px solid #000;
   border-radius: 4px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px rgba(5, 1, 1, 0.1);
   background: #c0c8ec;
   padding: 0.5rem 0.5rem;
-  margin: 0 0.5rem;
+  margin: 15px;
   font-size: 1rem;
   border-top-left-radius: 255px 15px;
   border-top-right-radius: 15px 225px;
@@ -573,10 +710,10 @@ nav i {
   position: absolute;
   top: 10px;
   left: -30px;
-  width: 200px;
+  width: 140px;
   height: 50px;
   background-color: #f5f5dc;
-  transform: rotate(-15deg);
+  transform: rotate(-30deg);
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
@@ -611,8 +748,6 @@ nav i {
   background-color: #c0c8ec;
 }
 
-/* Notes */
-
 /* scroll */
 
 .scroll {
@@ -625,7 +760,7 @@ nav i {
 }
 .contain {
   display: inline-block;
-  animation: ani 50s infinite linear;
+  animation: ani 30s infinite linear;
   font-size: 0;
 }
 .element {
@@ -634,16 +769,9 @@ nav i {
   position: relative;
   overflow: hidden;
   border-radius: 25px;
-  margin-right: 20px;
-}
-.scroll img {
-  width: 270px;
-  height: 320px;
-  display: inline-block;
-  object-fit: cover;
-  object-position: center;
-  border-radius: 25px;
-  margin-bottom: 30px;
+  margin-right: 70px;
+  margin-bottom: 20px;
+  padding: 15px;
 }
 
 @keyframes ani {
@@ -672,23 +800,26 @@ nav i {
 }
 
 .accordion {
-  width: 800px;
+  width: 1000px;
 }
 
 .accordion .contentBx {
   position: relative;
-  margin: 10px 20px;
+  margin: 5px 20px;
+  border-radius: 10px;
+  padding: 5px;
 }
 
 .contentBx .acc-label {
-  border: none;
+  /* border: none; */
   position: relative;
   padding: 10px;
+  border-radius: 5px;
   height: 60px;
   font-size: 20px;
   background-color: #fff;
   color: #000;
-  border: 1px solid #eeeded;
+  border-bottom: 1px solid #000;
   cursor: pointer;
 }
 
@@ -723,7 +854,10 @@ nav i {
   height: 100px;
   padding: 10px;
   color: #000;
-  border: 1px solid #eeeded;
+  border: 1px solid #000;
+  border-left: none;
+  border-right: none;
+  border-radius: 5px;
 }
 
 /* Footer */

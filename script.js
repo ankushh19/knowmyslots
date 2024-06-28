@@ -89,11 +89,32 @@ document.addEventListener("DOMContentLoaded", function () {
       header.innerHTML = header.innerHTML.replace(/<br\s*\/?>/gi, " ");
     } else {
       header.innerHTML =
-        "Unlock Your American Dream <br /> Simplify Your U.S Visa Journey with <br /> Our Tech Platform";
+        "Unlock Your American Dream <br /> Simplify Your U.S Visa Journey with Our Tech Platform";
     }
   }
 
   removeBrFromH1();
 
   window.addEventListener("resize", removeBrFromH1);
+});
+
+// Videos
+document.addEventListener("DOMContentLoaded", () => {
+  const videos = document.querySelectorAll(".video");
+
+  videos.forEach((video) => {
+    video.addEventListener("mouseenter", () => {
+      videos.forEach((v) => {
+        if (v !== video) {
+          v.classList.add("blur");
+        }
+      });
+    });
+
+    video.addEventListener("mouseleave", () => {
+      videos.forEach((v) => {
+        v.classList.remove("blur");
+      });
+    });
+  });
 });
