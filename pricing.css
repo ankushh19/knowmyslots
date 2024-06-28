@@ -92,7 +92,7 @@ nav {
   color: #fe633d;
 }
 
-button {
+.nav-right button {
   position: relative;
   display: inline-block;
   margin: 15px;
@@ -110,12 +110,12 @@ button {
   box-shadow: inset 0 0 0 0 #fe633d;
 }
 
-button:hover {
+.nav-right button:hover {
   color: white;
   box-shadow: inset 0 -100px 0 0 #fe633d;
 }
 
-button:active {
+.nav-right button:active {
   transform: scale(0.9);
 }
 
@@ -143,10 +143,12 @@ nav i {
 
 /* Top Image */
 .image {
-  margin-top: 20px;
-  padding: 20px;
+  border-bottom: 1px solid #eeeded;
+  /* margin-top: 20px; */
+  padding-bottom: 60px;
+  background-color: #fcfbf7;
   width: 100vw;
-  height: 85vh;
+  height: 90vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -163,6 +165,7 @@ nav i {
 /* Banner */
 
 .banner {
+  transform: translateY(-60%);
   margin: 20px auto;
   height: 100px;
   border-radius: 50px;
@@ -198,13 +201,13 @@ nav i {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 50px;
 }
 
-.people img {
+.people video {
   height: 300px;
-  border-radius: 20px;
-  width: 300px;
+  border-radius: 10px;
+  width: 250px;
   object-fit: cover;
 }
 
@@ -433,10 +436,119 @@ nav i {
   background-color: #c0c8ec;
 }
 
-.notes img {
-  height: 400px;
-  object-fit: cover;
+/* Notes */
+
+/* scroll */
+
+.scroll {
+  margin-top: 30px;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 0;
+  border-bottom: 1px solid #eeeded;
+}
+.contain {
+  display: inline-block;
+  animation: ani 50s infinite linear;
+  font-size: 0;
+}
+.element {
   cursor: pointer;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  border-radius: 25px;
+  margin-right: 20px;
+}
+.scroll img {
+  width: 270px;
+  height: 320px;
+  display: inline-block;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 25px;
+  margin-bottom: 30px;
+}
+
+@keyframes ani {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-100% - 20px));
+  }
+}
+
+/* FAQ */
+.faqs {
+  padding: 40px 80px;
+  border-bottom: 1px solid #eeeded;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.faqs .title {
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+
+.accordion {
+  width: 800px;
+}
+
+.accordion .contentBx {
+  position: relative;
+  margin: 10px 20px;
+}
+
+.contentBx .acc-label {
+  border: none;
+  position: relative;
+  padding: 10px;
+  height: 60px;
+  font-size: 20px;
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #eeeded;
+  cursor: pointer;
+}
+
+.contentBx .acc-label:hover {
+  background: lightpink;
+  color: #fff;
+}
+
+.contentBx .acc-label::before {
+  content: "+";
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  font-size: 1.5em;
+}
+
+.contentBx.active .acc-label::before {
+  content: "-";
+}
+
+.contentBx .acc-content {
+  position: relative;
+  background: #fff;
+  overflow-y: auto;
+  height: 0;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.contentBx.active .acc-content {
+  height: 100px;
+  padding: 10px;
+  color: #000;
+  border: 1px solid #eeeded;
 }
 
 /* Footer */
