@@ -164,7 +164,6 @@ nav i {
 /* Ads */
 .ads {
   background-color: #fcfbf7;
-  border-bottom: 1px solid #eeeded;
   padding: 80px;
   display: flex;
   justify-content: center;
@@ -180,7 +179,7 @@ nav i {
 
 .ads p {
   text-align: center;
-  width: 640px;
+  width: 800px;
   line-height: 1.4;
   font-size: 18px;
   font-weight: 500;
@@ -196,6 +195,80 @@ nav i {
   font-weight: 500;
 }
 
+/* How We Works */
+.how-we-work {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #fcfbf7;
+  padding-bottom: 100px;
+  border-bottom: 1px solid #eeeded;
+}
+
+.how-we-work h1 {
+  font-size: 35px;
+  line-height: 1.4;
+  margin-bottom: 10px;
+}
+
+.steps-container {
+  margin-top: 20px;
+  width: 600px;
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+/* .step:last-child {
+  margin-bottom: 0;
+} */
+
+.step-number {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: #e0ebf5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  font-weight: bold;
+  color: #3e4a59;
+  margin-right: 20px;
+}
+
+.step-content {
+  max-width: 500px;
+}
+
+.step-content h2 {
+  margin: 0;
+  font-size: 23px;
+  color: #2e3a47;
+}
+
+.step-content p {
+  margin: 5px 0 0;
+  font-size: 16px;
+  color: #4a4a4a;
+}
+
+.number {
+  height: 70px;
+  width: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: lightgreen;
+  color: #fff;
+  font-size: 36px;
+}
+
 /* Banner */
 
 .banner {
@@ -206,8 +279,8 @@ nav i {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #fe633d;
-  padding: 10px;
+  background-color: #083d77;
+  padding: 20px;
   color: #fff;
   width: 1200px;
 }
@@ -221,13 +294,26 @@ nav i {
 }
 
 .banner button {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #000;
+  background: #fff;
   cursor: pointer;
-  padding: 15px 30px;
-  margin-left: 10px;
-  font-weight: 500;
-  border-radius: 40px;
+  transition: ease-out 0.5s;
   border: none;
+  border-radius: 30px;
+  box-shadow: inset 0 0 0 0 #000;
 }
+
+/* .banner button:hover {
+  color: #000;
+  box-shadow: inset 0 -100px 0 0 #fff;
+} */
 
 /* people */
 
@@ -261,7 +347,12 @@ nav i {
   gap: 20px;
   flex-wrap: wrap;
   padding: 40px 80px;
-  /* background-color: #fcfbf7; */
+  background: linear-gradient(180deg, #f9f9ff 0%, #ecf8ff 50%, #f0fbff 100%);
+}
+
+.operations > p {
+  font-size: 16px;
+  font-weight: 600;
 }
 
 .operation {
@@ -413,7 +504,7 @@ nav i {
   position: relative;
   border: 1px solid #000;
   width: 350px;
-  /* height: 500px; */
+  height: 500px;
   padding: 35px;
   border-radius: 25px;
   display: flex;
@@ -546,7 +637,7 @@ line {
 .card .top-sub {
   text-align: center;
   font-size: 24px;
-  font-weight: 500;
+  font-weight: 600;
   margin-bottom: 5px;
 }
 
@@ -568,7 +659,7 @@ line {
   text-align: center;
   font-size: 40px;
   margin-top: 0;
-  margin-bottom: 0px;
+  margin-bottom: 15px;
 }
 
 .card .sm-head {
@@ -579,6 +670,11 @@ line {
 
 .card i {
   font-size: 18px;
+  color: #088178;
+}
+
+.card #close {
+  color: red;
 }
 
 .card .des {
@@ -593,6 +689,7 @@ line {
   padding: 7px 0px;
   margin-left: 70px;
   margin-right: 70px;
+  font-weight: 600;
   margin-top: 10px;
   border-radius: 15px;
   text-align: center;
@@ -613,6 +710,31 @@ line {
 
 .card .pricing-btn:active {
   transform: scale(0.9);
+}
+
+/* Why Us */
+.why-us {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* padding: 80px 100px; */
+  border-bottom: 1px solid #eeeded;
+}
+
+.why-us p {
+  max-width: 60%;
+  font-size: 16px;
+  text-align: center;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.why-us h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
 }
 
 /* Notes */
@@ -828,11 +950,6 @@ line {
   cursor: pointer;
 }
 
-.contentBx .acc-label:hover {
-  background: lightpink;
-  color: #fff;
-}
-
 .contentBx .acc-label::before {
   content: "+";
   position: absolute;
@@ -856,7 +973,21 @@ line {
 }
 
 .contentBx.active .acc-content {
-  height: 80px;
+  /* height: 80px; */
+  height: fit-content;
+  padding: 20px;
+  /* padding: 5px; */
+  color: #000;
+  border: 1px solid #000;
+  border-left: none;
+  line-height: 1.4;
+  font-weight: 500;
+  border-right: none;
+  border-radius: 5px;
+}
+
+.contentBx.active .acc-content:nth-child(1) {
+  height: 200px;
   padding-top: 20px;
   padding-left: 5px;
   color: #000;
